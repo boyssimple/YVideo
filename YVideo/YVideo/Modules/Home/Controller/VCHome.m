@@ -9,10 +9,13 @@
 #import "VCHome.h"
 #import "CellHome.h"
 #import "RequestBeanHome.h"
+#import "VCPlayer.h"
+#import "HeaderHome.h"
 
 @interface VCHome ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *table;
 @property (nonatomic, strong) NSMutableArray *dataSource;
+@property (nonatomic, strong) HeaderHome *header;
 @end
 
 @implementation VCHome
@@ -22,6 +25,7 @@
     [self initMain];
     [self loadData];
 }
+
 
 - (void)initMain{
     [self.view addSubview:self.table];
@@ -82,9 +86,22 @@
     CellHome *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
         cell = [[CellHome alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        
     }
+    cell.index = indexPath;
     NSDictionary *data = [self.dataSource objectAtIndex:indexPath.row];
     [cell updateData:data];
+    __weak typeof(self) safeSelf = self;
+    cell.playBlock = ^(NSIndexPath *index) {
+        NSDictionary *data = [safeSelf.dataSource objectAtIndex:index.row];
+        NSDictionary *resources= [data valueForKey:@"resources"];
+        NSDictionary *wifi= [resources valueForKey:@"wifi"];
+        VCPlayer *vc = [[VCPlayer alloc]init];
+        vc.hidesBottomBarWhenPushed = YES;
+        vc.url = [wifi valueForKey:@"cdn_url"];
+        vc.title = [data valueForKey:@"title"];
+        [safeSelf.navigationController pushViewController:vc animated:YES];
+    };
     return cell;
 }
 
@@ -120,18 +137,25 @@
 #pragma mark - Getter Setter
 - (UITableView*)table{
     if(!_table){
-        _table = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWIDTH, DEVICEHEIGHT) style:UITableViewStyleGrouped];
+        _table = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWIDTH, DEVICEHEIGHT - NAV_STATUS_HEIGHT) style:UITableViewStyleGrouped];
         _table.delegate = self;
         _table.dataSource = self;
         _table.backgroundColor = [UIColor clearColor];
         _table.separatorStyle = UITableViewCellSeparatorStyleNone;
-        
+        _table.tableHeaderView = self.header;
         __weak VCHome *weakSelf = self;
         _table.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
             [weakSelf loadData];
         }];
     }
     return _table;
+}
+
+- (HeaderHome*)header{
+    if(!_header){
+        _header = [[HeaderHome alloc]initWithFrame:CGRectMake(0, 0, DEVICEWIDTH, 80*RATIO_WIDHT320)];
+    }
+    return _header;
 }
 
 @end

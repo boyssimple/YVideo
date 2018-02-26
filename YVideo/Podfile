@@ -13,6 +13,7 @@ target 'YVideo' do
   pod 'UITableView-NXEmptyView', '~> 0.1.7'
   pod 'MBProgressHUD', '~> 0.9.1'
   pod 'MJRefresh'
+  pod 'Masonry'
   
 
   target 'YVideoTests' do

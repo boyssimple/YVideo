@@ -32,10 +32,10 @@
                                    kImgKey    : @"TabFriendIcon",
                                    kSelImgKey : @"TabFriendIcon"},
                                  
-                                 @{kClassKey  : @"VCPublish",
-                                   kTitleKey  : @"发布",
-                                   kImgKey    : @"TabDiscoverIcon",
-                                   kSelImgKey : @"TabDiscoverIcon"},
+//                                 @{kClassKey  : @"VCPublish",
+//                                   kTitleKey  : @"发布",
+//                                   kImgKey    : @"TabDiscoverIcon",
+//                                   kSelImgKey : @"TabDiscoverIcon"},
                                  
                                  @{kClassKey  : @"VCNewYear",
                                    kTitleKey  : @"春节",
