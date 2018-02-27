@@ -11,6 +11,7 @@
 #import "RequestBeanHome.h"
 #import "VCPlayer.h"
 #import "HeaderHome.h"
+#import "VCPlayerDetail.h"
 
 @interface VCHome ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *table;
@@ -34,27 +35,17 @@
 
 - (void)loadData{
     RequestBeanHome *requestBean = [RequestBeanHome new];
-//    [AJNetworkConfig shareInstance].hubDelegate = self;
-    requestBean.appid = @"hotrizon2";
-    requestBean.cdn_url = @"1";
-    requestBean.ch = @"AppStore";
-    requestBean.channel_id = @"0";
-    requestBean.ckw = @"0";
-    requestBean.columns = @"1";
-    requestBean.detection = @"2";
-    requestBean.direction = @"up";
-    requestBean.ios = @"11.2.5";
-    requestBean.kw = @"0";
-    requestBean.m2 = @"b4db2c78c225e65183ba260e6ecd859f";
-    requestBean.os_type = @"ios";
-    requestBean.sign = @"0958FF9EEF86C2F1AE0353F69D7E018C";
-    requestBean.svc = @"3";
-    requestBean.time = @"1519462718638";
-    requestBean.vc = @"10201";
-    
+     requestBean.cdn_url = @"1";
+     requestBean.ckw = @"0";
+     requestBean.columns = @"1";
+     requestBean.detection = @"2";
+     requestBean.direction = @"up";
+     requestBean.sign = @"0958FF9EEF86C2F1AE0353F69D7E018C";
+     requestBean.time = @"1519462718638";
+     requestBean.kw = @"0";
+     requestBean.svc = @"3";
     [NetworkManager requestWithBean:requestBean callBack:^(__kindof AJResponseBeanBase * _Nullable responseBean, AJError * _Nullable err) {
         [self.table.mj_header endRefreshing];
-//        [self.table.mj_footer endRefreshing];
         ResponseBeanHome *response = responseBean;
         if (!err) {
             NSArray *d = [response.data objectForKey:@"videoList"];
@@ -94,12 +85,16 @@
     __weak typeof(self) safeSelf = self;
     cell.playBlock = ^(NSIndexPath *index) {
         NSDictionary *data = [safeSelf.dataSource objectAtIndex:index.row];
-        NSDictionary *resources= [data valueForKey:@"resources"];
-        NSDictionary *wifi= [resources valueForKey:@"wifi"];
-        VCPlayer *vc = [[VCPlayer alloc]init];
+//        NSDictionary *resources= [data valueForKey:@"resources"];
+//        NSDictionary *wifi= [resources valueForKey:@"wifi"];
+//        VCPlayer *vc = [[VCPlayer alloc]init];
+//        vc.hidesBottomBarWhenPushed = YES;
+//        vc.url = [wifi valueForKey:@"cdn_url"];
+//        vc.title = [data valueForKey:@"title"];
+//        [safeSelf.navigationController pushViewController:vc animated:YES];
+        VCPlayerDetail *vc = [[VCPlayerDetail alloc]init];
+        vc.ID = [data getString:@"id"];
         vc.hidesBottomBarWhenPushed = YES;
-        vc.url = [wifi valueForKey:@"cdn_url"];
-        vc.title = [data valueForKey:@"title"];
         [safeSelf.navigationController pushViewController:vc animated:YES];
     };
     return cell;
@@ -132,7 +127,30 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    NSDictionary *data = [self.dataSource objectAtIndex:indexPath.row];
+    VCPlayerDetail *vc = [[VCPlayerDetail alloc]init];
+    vc.ID = [data getString:@"id"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
+
+#pragma mark - AJHubProtocol
+/**
+ * 显示Hub
+ *
+ @param tip hub文案
+ */
+- (void)showHub:(nullable NSString *)tip{
+    MBProgressHUD *HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    HUD.labelText = tip;
+}
+
+/**
+ * 隐藏Hub
+ */
+- (void)dismissHub{
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+}
+
 
 #pragma mark - Getter Setter
 - (UITableView*)table{

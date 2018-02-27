@@ -38,7 +38,7 @@
 //                                   kSelImgKey : @"TabDiscoverIcon"},
                                  
                                  @{kClassKey  : @"VCNewYear",
-                                   kTitleKey  : @"春节",
+                                   kTitleKey  : @"舌尖",
                                    kImgKey    : @"TabDiscoverIcon",
                                    kSelImgKey : @"TabDiscoverIcon"},
                                  

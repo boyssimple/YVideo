@@ -44,6 +44,14 @@
 		1C06860F2043EEA800F3CF6E /* SCYLayerAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0685FF2043EEA800F3CF6E /* SCYLayerAddition.m */; };
 		1C0686102043EEA800F3CF6E /* UIView+SCYCategory..m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0686002043EEA800F3CF6E /* UIView+SCYCategory..m */; };
 		1C0686162043F8DF00F3CF6E /* HeaderHome.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0686152043F8DF00F3CF6E /* HeaderHome.m */; };
+		1C068619204500D600F3CF6E /* VCPlayerDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C068618204500D600F3CF6E /* VCPlayerDetail.m */; };
+		1C06861C2045015C00F3CF6E /* HeaderPlayerDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C06861B2045015C00F3CF6E /* HeaderPlayerDetail.m */; };
+		1C06861F2045088B00F3CF6E /* CellVideoDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C06861E2045088B00F3CF6E /* CellVideoDetail.m */; };
+		1C06862220450AE900F3CF6E /* SectionRelatedVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C06862120450AE900F3CF6E /* SectionRelatedVideo.m */; };
+		1C06862520450C2700F3CF6E /* CellRelatedVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C06862420450C2700F3CF6E /* CellRelatedVideo.m */; };
+		1C0686282045327C00F3CF6E /* RequestBeanDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0686272045327C00F3CF6E /* RequestBeanDetail.m */; };
+		1C06862B2045332E00F3CF6E /* RequestBeanModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C06862A2045332E00F3CF6E /* RequestBeanModel.m */; };
+		1C06862E2045423E00F3CF6E /* RequestBeanRlated.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C06862D2045423E00F3CF6E /* RequestBeanRlated.m */; };
 		64210EF0F1797E1D87EE6F9E /* libPods-YVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC63A8BE2FCCB013576E821A /* libPods-YVideo.a */; };
 		AE7DBB4BAC655D09A252BD71 /* libPods-YVideoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C85646A079C019853C6EDF24 /* libPods-YVideoUITests.a */; };
 		E0744C7147EEF5F6832A3E96 /* libPods-YVideoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D51353970598CF7EDF046CC /* libPods-YVideoTests.a */; };
@@ -140,6 +148,22 @@
 		1C0686012043EEA800F3CF6E /* UIView+SCYCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SCYCategory.h"; sourceTree = "<group>"; };
 		1C0686142043F8DF00F3CF6E /* HeaderHome.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderHome.h; sourceTree = "<group>"; };
 		1C0686152043F8DF00F3CF6E /* HeaderHome.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderHome.m; sourceTree = "<group>"; };
+		1C068617204500D600F3CF6E /* VCPlayerDetail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCPlayerDetail.h; sourceTree = "<group>"; };
+		1C068618204500D600F3CF6E /* VCPlayerDetail.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCPlayerDetail.m; sourceTree = "<group>"; };
+		1C06861A2045015B00F3CF6E /* HeaderPlayerDetail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderPlayerDetail.h; sourceTree = "<group>"; };
+		1C06861B2045015C00F3CF6E /* HeaderPlayerDetail.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderPlayerDetail.m; sourceTree = "<group>"; };
+		1C06861D2045088B00F3CF6E /* CellVideoDetail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellVideoDetail.h; sourceTree = "<group>"; };
+		1C06861E2045088B00F3CF6E /* CellVideoDetail.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellVideoDetail.m; sourceTree = "<group>"; };
+		1C06862020450AE900F3CF6E /* SectionRelatedVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SectionRelatedVideo.h; sourceTree = "<group>"; };
+		1C06862120450AE900F3CF6E /* SectionRelatedVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SectionRelatedVideo.m; sourceTree = "<group>"; };
+		1C06862320450C2700F3CF6E /* CellRelatedVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellRelatedVideo.h; sourceTree = "<group>"; };
+		1C06862420450C2700F3CF6E /* CellRelatedVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellRelatedVideo.m; sourceTree = "<group>"; };
+		1C0686262045327C00F3CF6E /* RequestBeanDetail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestBeanDetail.h; sourceTree = "<group>"; };
+		1C0686272045327C00F3CF6E /* RequestBeanDetail.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestBeanDetail.m; sourceTree = "<group>"; };
+		1C0686292045332E00F3CF6E /* RequestBeanModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestBeanModel.h; sourceTree = "<group>"; };
+		1C06862A2045332E00F3CF6E /* RequestBeanModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestBeanModel.m; sourceTree = "<group>"; };
+		1C06862C2045423E00F3CF6E /* RequestBeanRlated.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestBeanRlated.h; sourceTree = "<group>"; };
+		1C06862D2045423E00F3CF6E /* RequestBeanRlated.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestBeanRlated.m; sourceTree = "<group>"; };
 		26909C2D0C9DCB9BB1990056 /* Pods-YVideoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YVideoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YVideoUITests/Pods-YVideoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4E4A6EFADD9B878D6C228DA3 /* Pods-YVideoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YVideoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YVideoTests/Pods-YVideoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6D51353970598CF7EDF046CC /* libPods-YVideoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YVideoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -458,6 +482,8 @@
 				1C0685B82041675400F3CF6E /* VCNavBase.m */,
 				1C06859D204165DE00F3CF6E /* VCBase.h */,
 				1C06859E204165DE00F3CF6E /* VCBase.m */,
+				1C0686292045332E00F3CF6E /* RequestBeanModel.h */,
+				1C06862A2045332E00F3CF6E /* RequestBeanModel.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -516,6 +542,8 @@
 			children = (
 				1C0685E22043EE8400F3CF6E /* VCPlayer.h */,
 				1C0685E32043EE8400F3CF6E /* VCPlayer.m */,
+				1C068617204500D600F3CF6E /* VCPlayerDetail.h */,
+				1C068618204500D600F3CF6E /* VCPlayerDetail.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -523,6 +551,10 @@
 		1C0685DF2043EE6000F3CF6E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1C0686262045327C00F3CF6E /* RequestBeanDetail.h */,
+				1C0686272045327C00F3CF6E /* RequestBeanDetail.m */,
+				1C06862C2045423E00F3CF6E /* RequestBeanRlated.h */,
+				1C06862D2045423E00F3CF6E /* RequestBeanRlated.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -530,6 +562,14 @@
 		1C0685E02043EE6000F3CF6E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1C06861A2045015B00F3CF6E /* HeaderPlayerDetail.h */,
+				1C06861B2045015C00F3CF6E /* HeaderPlayerDetail.m */,
+				1C06861D2045088B00F3CF6E /* CellVideoDetail.h */,
+				1C06861E2045088B00F3CF6E /* CellVideoDetail.m */,
+				1C06862020450AE900F3CF6E /* SectionRelatedVideo.h */,
+				1C06862120450AE900F3CF6E /* SectionRelatedVideo.m */,
+				1C06862320450C2700F3CF6E /* CellRelatedVideo.h */,
+				1C06862420450C2700F3CF6E /* CellRelatedVideo.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -932,14 +972,19 @@
 				1C06854E2041628A00F3CF6E /* ViewController.m in Sources */,
 				1C0685A52041665000F3CF6E /* VCHome.m in Sources */,
 				1C0685592041628A00F3CF6E /* main.m in Sources */,
+				1C06861F2045088B00F3CF6E /* CellVideoDetail.m in Sources */,
+				1C068619204500D600F3CF6E /* VCPlayerDetail.m in Sources */,
 				1C06860B2043EEA800F3CF6E /* XJBottomMenu.m in Sources */,
 				1C0686162043F8DF00F3CF6E /* HeaderHome.m in Sources */,
 				1C0685B4204166A100F3CF6E /* VCPublish.m in Sources */,
+				1C06862520450C2700F3CF6E /* CellRelatedVideo.m in Sources */,
 				1C0685C120416DB100F3CF6E /* RequestBeanHome.m in Sources */,
+				1C06862220450AE900F3CF6E /* SectionRelatedVideo.m in Sources */,
 				1C0685BE20416A6000F3CF6E /* CellHome.m in Sources */,
 				1C0685A2204165F200F3CF6E /* UITypes+extension.m in Sources */,
 				1C0685AE2041667B00F3CF6E /* VCNewYear.m in Sources */,
 				1C0685AB2041666F00F3CF6E /* VCMine.m in Sources */,
+				1C06861C2045015C00F3CF6E /* HeaderPlayerDetail.m in Sources */,
 				1C06860E2043EEA800F3CF6E /* XJGestureButton.m in Sources */,
 				1C06860C2043EEA800F3CF6E /* XJTopMenu.m in Sources */,
 				1C0686102043EEA800F3CF6E /* UIView+SCYCategory..m in Sources */,
@@ -949,8 +994,11 @@
 				1C0686092043EEA800F3CF6E /* XjAVPlayerSDK.m in Sources */,
 				1C06854B2041628A00F3CF6E /* AppDelegate.m in Sources */,
 				1C06859F204165DE00F3CF6E /* VCBase.m in Sources */,
+				1C0686282045327C00F3CF6E /* RequestBeanDetail.m in Sources */,
+				1C06862B2045332E00F3CF6E /* RequestBeanModel.m in Sources */,
 				1C0685C420416EFE00F3CF6E /* NetworkManager.m in Sources */,
 				1C0685BA2041675400F3CF6E /* VCNavBase.m in Sources */,
+				1C06862E2045423E00F3CF6E /* RequestBeanRlated.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,8 @@
 #define Net_Base @"k-api.360kan.com/hotrizon2/"
 
 #define Net_Home_list @"list"
+#define Net_video_detail @"detail"
+#define Net_relate_list @"relate"
 
 
 

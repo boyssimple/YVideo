@@ -22,5 +22,5 @@
 #import "NetworkManager.h"
 #import <MBProgressHUD.h>
 #import "NSDictionary+JKSafeAccess.h"
-
+#import "RequestBeanModel.h"
 #endif /* PrefixHeader_pch */
